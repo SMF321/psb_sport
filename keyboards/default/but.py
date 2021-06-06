@@ -108,3 +108,7 @@ where_place_murkup = ReplyKeyboardMarkup(resize_keyboard=True)\
     .add(place54)\
     .add(place55)\
     .add(place56)
+
+but1 = KeyboardButton('Профиль')
+but2 = KeyboardButton('Информация о мероприятиях')
+but12 = ReplyKeyboardMarkup(resize_keyboard=True).add(but1).add(but2)

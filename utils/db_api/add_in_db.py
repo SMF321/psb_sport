@@ -1,5 +1,4 @@
-def add_info(conn, raspisanie, date_text, first, first_office, second, second_office, third, third_office, fourth, fourth_office,
-             additionally):
+def add_info(conn, raspisanie, date_text, name, url, latitude, longitude, points):
 
 
     result = raspisanie.select()
@@ -7,11 +6,7 @@ def add_info(conn, raspisanie, date_text, first, first_office, second, second_of
 
 #######################НАДО ЗАХУЯРИТЬ ФУНКЦИЮ
 
-    test1 = raspisanie.insert().values(date=date_text, first=first, first_office=first_office,
-                                       second=second, second_office=second_office,
-                                       third=third, third_office=third_office,
-                                       fourth=fourth, fourth_office=fourth_office,
-                                       additionally=additionally)
+    test1 = raspisanie.insert().values(Date=date_text,Name=name,URL=url,Latitude=latitude,Longtitude=longitude,PRICE=points)
     conn.execute(test1)
 
     print(conn.execute(result).fetchall())
